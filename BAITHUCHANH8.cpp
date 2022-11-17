@@ -54,3 +54,4 @@ int sx(int *a,int n , int m)
    }	
    return 0;
 }
+// made by KIEU TAN PHUOC
