@@ -225,4 +225,4 @@ int daonguoc (char S1[50])
    		getch();
 	return 0;
 }
-
+//made by phuoc
