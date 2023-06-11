@@ -8,9 +8,9 @@ typedef struct node
 	long stt;
 	char hoten[50];
 	char sothua[50];
-	char chieurong [50];
-	char chieudai[50];
-	char dientich [50];
+    int chieurong ;
+	int chieudai;
+	int dientich;
 }node;
 typedef struct stack
  {
@@ -43,7 +43,7 @@ node pop (stack &s)
 int main()
 {
 	int n;stack s;node x;
-	int tl;char *t2;  char *t3; char  *t4; char *t5; char *t6;
+	int tl;char *t2;  char *t3;int t4;int t5;int t6;
 	printf("\n Nhap vao phan tu:");
 	scanf("%d",&n);
 	khoitao(s);
@@ -59,13 +59,20 @@ int main()
 		gets(x.hoten);
 		printf("\n Nhap chieu rong:");
 		fflush(stdin);
-		gets(x.chieurong);
+		scanf("%d",&x.chieurong);
 		printf("\n Nhap chieu dai:");
 		fflush(stdin);
-		gets(x.chieudai);
-		printf ("\n Nhap dien tich:");
+	    scanf("%d",&x.chieudai);
+		if((x.chieurong>0)&&(x.chieudai>0))
+		{
+			x.dientich=x.chieurong*x.chieudai;
+			printf("\n Dien tich: %dm2",x.dientich);
+		}
+		else
+		{ 
+		printf("\n Chieu rong hoac chieu dai khong hop le.");
+	    }
 		fflush(stdin);
-		gets(x.dientich);
 		push(s,x);
 	}
 while( !empty(s))
@@ -73,7 +80,7 @@ while( !empty(s))
 	x=pop(s);
 	printf("\n|--------------------------------------------------------------------------------------------|\n");
 	printf("\n|stt |  So thua  |       Ho ten       | Chieu rong   |   Chieu dai   |        Dien tich      |\n");
-	printf("\n|%d   |   %-7s    |            %s       |        %sm   |    %sm      |       %sm2              |\n",x.stt,x.sothua,x.hoten,x.chieurong,x.chieudai,x.dientich);
+	printf("\n|%d   |   %-7s    |            %s       |        %dm   |    %dm      |       %dm2              |\n",x.stt,x.sothua,x.hoten,x.chieurong,x.chieudai,x.dientich);
 	printf("\n|--------------------------------------------------------------------------------------------|\n");
 }
 }
