@@ -127,17 +127,17 @@ int main()
  
 
     gotoxy(10,10); textcolor(15); printf("        Cau a!! to muon noi chuyen voi cau.....");
-    Sleep(5000);gotoxy(32,6); textcolor(14); printf("_______Loading......15%%_ ");
+    Sleep(5000);gotoxy(32,6); textcolor(14); printf("_______Loading......15%%_____ ");
     gotoxy(10,10); textcolor(15); printf("       Truoc khi gap cau....to co nhieu thoi gian ranh roi lam");
-    Sleep(5000);gotoxy(32,6); textcolor(14); printf("_______Loading......20%%_ ");
+    Sleep(5000);gotoxy(32,6); textcolor(14); printf("_______Loading......20%%_____ ");
     gotoxy(10,10); textcolor(15); printf("      Nhung tu sau khi gap cau....Nhung khoang thoi gian do to luon nghi ve cau");
     gotoxy(10,12); textcolor(15); printf("               va lap day boi noi nho, tuong tu, va nhung suy nghi ve cau");
-    Sleep(10000);gotoxy(32,6); textcolor(14); printf("______Loading......34%%_");
+    Sleep(10000);gotoxy(32,6); textcolor(14); printf("______Loading......34%%_____");
     gotoxy(10,10); textcolor(15); printf("      Co le 'To thich cau that roi ;-;                                               ");
     gotoxy(10,12); textcolor(15); printf("                                                                              ");
-    Sleep(5000);gotoxy(32,6); textcolor(14); printf("______Loading......45%%_ ");
+    Sleep(5000);gotoxy(32,6); textcolor(14); printf("______Loading......45%%_____ ");
     gotoxy(10,10); textcolor(15); printf("...                                                                          ");
-    Sleep(5000);gotoxy(32,6); textcolor(14); printf("______Loading......55%%_");
+    Sleep(5000);gotoxy(32,6); textcolor(14); printf("______Loading......55%%______");
     gotoxy(10,10); textcolor(15); printf("Nhieu luc thuc su to muon lay het can dam tien lai gan cau va noi ...                 ");
     gotoxy(10,12); textcolor(11); printf("                                    'TO THICH CAU'                            ");
     Sleep(5000);gotoxy(32,6); textcolor(14); printf("______Loading......65%%_");
