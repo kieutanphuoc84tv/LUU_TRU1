@@ -250,7 +250,7 @@ int main(){
 					printf("*");
 				}
 				textcolor(7);
-				status("Ban da thua",12);
+				status("Thua roi",12);
 				restart=1;
 				getch();
 			}
