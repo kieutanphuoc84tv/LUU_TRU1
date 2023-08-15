@@ -129,7 +129,7 @@ void getup(){
 
 
 void score(int sc){
-	gotoxy(69,21);
+	gotoxy(70,21);
 	printf("%6d",sc*10);
 }
 
