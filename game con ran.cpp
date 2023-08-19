@@ -120,7 +120,7 @@ void getup(){
 	for(x=0;x<18;x++)
 		printf("%c",196);
 	printf("%c",217);
-	gotoxy(32,21);
+	gotoxy(32,23);
 	printf("An thuc an #");
 	gotoxy(32,22);
 	printf("Bam 'Space' de dung ");
@@ -160,7 +160,7 @@ int main(){
 					printf(" ");
 				}
 			size=5;
-			speed=200;
+			speed=150;
 			scr=0;
 			score(scr);
 			flow=RIGHT;
