@@ -197,7 +197,7 @@ int main(){
 					do{
 						xb=rand()%75+3;
 					}while(xb%2!=0);
-					yb=rand()%17+2;
+					yb=rand()%17+3;
 					for(i=0;i<size;i++)
 						if(xb==xpos[i] && yb==ypos[i]){
 							tmp=0; break;
