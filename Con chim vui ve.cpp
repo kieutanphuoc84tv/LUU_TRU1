@@ -1,4 +1,4 @@
-//con game nay co the gay uc che nguoi choi va co the gay dap may
+//con game nay co the gay uc che nguoi che va co the gay dap may
 //giu binh tinh truoc khi choi
 //chuc ban choi game vui ve:))
 //made by kieu tan phuoc
@@ -17,16 +17,16 @@ void goToXY(int x, int y) {
 const int hurdleCount = 4;
 
 class Flappy_Bird {
-	int hurdlePos[hurdleCount][2]; // mô hình lên xuống của chim
+	int hurdlePos[hurdleCount][2];
 	int screenWidth = 79;
 	int screenHeight = 25;
 	int hurdleGap = 8;
 	int betweenHurdleGap;
 
-	int birdX = 17;
+	int birdX = 16;
 	int birdY = 15;
 
-	int jump = 4;
+	int jump = 3;
 	int score = 0;
 public:
 	Flappy_Bird() {
@@ -41,7 +41,7 @@ public:
 		}
 	}
 
-	void printHurdle() { //các trụ cột khi chim bay qua
+	void printHurdle() {
 		int count = 0;
 		for (int i = 0; i < hurdleCount; i++) {
 			for (int j = 0; j < screenHeight; j++) {
@@ -64,7 +64,7 @@ public:
 							cout << "   ";
 						}
 						
-						if (hurdlePos[i][0] - 1 > 0) {
+						if (hurdlePos[i][0] - 2 > 0) {
 							goToXY(hurdlePos[i][0] - 1, j);
 							cout << "===";
 						}
@@ -85,7 +85,7 @@ public:
 
 				hurdlePos[i][0] = hurdlePos[prev][0] + betweenHurdleGap;
 
-				int breakPos = rand() % (screenHeight / 3) + hurdleGap;
+				int breakPos = rand() % (screenHeight / 4) + hurdleGap;
 				hurdlePos[i][1] = breakPos;
 			
 				for (int i = 0; i < screenHeight; i++) {
@@ -97,14 +97,14 @@ public:
 	}
 
 	bool collisionCheck() {
-		if (birdY == 0 || birdY + 2 == screenHeight) return true;
+		if (birdY == 0 || birdY + 3 == screenHeight) return true;
 		
 		for (int i = 0; i < hurdleCount; i++) {
 			if (
 				hurdlePos[i][0] == birdX &&
 				(
 					birdY >= hurdlePos[i][1] ||
-					birdY + 2 <= (hurdlePos[i][1] + hurdleGap)
+					birdY + 3 <= (hurdlePos[i][1] + hurdleGap)
 				)
 			) {
 				score++;
@@ -137,7 +137,7 @@ public:
 		cout << "Score: " << score;
 	}
 
-	void printBird() { // mô hình của con chim
+	void printBird() {
 			goToXY(birdX - 5, birdY);		cout << " __";
 			goToXY(birdX - 5, birdY + 1);	cout << "/-/o\\";
 			goToXY(birdX - 5, birdY + 2);		cout << "\\_\\-/";
@@ -165,23 +165,20 @@ public:
 
 			if (collisionCheck()) break;
 			
-			Sleep(100);
+			Sleep(90);
 			clearBird();
 			birdY += 1;
 		}
 	}
 };
 
-int main(){ // rest game 
+int main(){
 	
 	while (true) {
 		Flappy_Bird fb;
 		fb.play();
-		goToXY(30,30);
+		goToXY(40,30);
 		cout << "Ban co mua choi lai (Y/N)";
-		goToXY(40,36);
-		cout <<"Made by kieu tan phuoc";
-		
 		
 		char ch;
 		cin >> ch;
